@@ -1,18 +1,12 @@
 class Transfer
   # your code here
   attr_accessor :sender, :receiver, :status, :amount
-  @@all = []
 
   def initialize(sender, receiver, amount)
     @sender = sender
     @receiver = receiver
     @status = "pending"
     @amount = amount
-    self.save
-  end
-
-  def save
-    @@all << self
   end
 
   def valid?
