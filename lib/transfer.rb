@@ -26,7 +26,7 @@ class Transfer
   end
 
   def reverse_transfer
-    if @last_transfer!= nil && @last_transfer.status == "complete"
+    if @last_transfer != nil && @last_transfer.status == "complete"
       @last_transfer.sender.balance = @last_transfer.sender.balance + @last_transfer.amount
       @last_transfer.receiver.balance = @last_transfer.receiver.balance - @last_transfer.amount
       @last_transfer.status = "reversed"
